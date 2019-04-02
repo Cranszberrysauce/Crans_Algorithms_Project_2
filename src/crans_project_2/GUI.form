@@ -94,7 +94,7 @@
             <Property name="editable" type="boolean" value="false"/>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Enter number of states in machine and an alphabet of a-z.&#xa;Initial state for every machine is State 0. &#xa;Must have transition for every character at every state, State 0 inluded."/>
+            <Property name="text" type="java.lang.String" value="Enter number of states in machine and an alphabet of a-z.&#xa;Initial state for every machine is State 1. &#xa;Must have transition for every character at every state."/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
         </Component>

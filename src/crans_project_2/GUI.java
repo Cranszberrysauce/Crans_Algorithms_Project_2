@@ -77,7 +77,7 @@ public class GUI extends javax.swing.JFrame
         displayOutput.setEditable(false);
         displayOutput.setColumns(20);
         displayOutput.setRows(5);
-        displayOutput.setText("Enter number of states in machine and an alphabet of a-z.\nInitial state for every machine is State 1 \nMust have transition for every character at every state.");
+        displayOutput.setText("Enter number of states in machine and an alphabet of a-z.\nInitial state for every machine is State 1. \nMust have transition for every character at every state.");
         displayOutput.setToolTipText("");
         jScrollPane1.setViewportView(displayOutput);
 
