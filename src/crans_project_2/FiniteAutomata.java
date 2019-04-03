@@ -25,14 +25,14 @@ public class FiniteAutomata
     public FiniteAutomata(int states, String characters, int[][] transitions, int start, 
                             List<Integer> accept)
     {
-        currentState = 0;
+        currentState = start;
         numberOfStates = states;
         alphabet = new char[characters.length()];
         characters = sortAlphabet(characters);
         for(int i = 0; i < characters.length(); i++)
             alphabet[i] = characters.charAt(i);
         changeTable = transitions;
-        startState = 0;//start;
+        startState = start;
         acceptingStates = accept;
     }
     
