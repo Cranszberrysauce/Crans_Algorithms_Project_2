@@ -25,14 +25,14 @@ public class FiniteAutomata
     public FiniteAutomata(int states, String characters, int[][] transitions, int start, 
                             List<Integer> accept)
     {
-        currentState = start;
+        currentState = 0;
         numberOfStates = states;
         alphabet = new char[characters.length()];
         characters = sortAlphabet(characters);
         for(int i = 0; i < characters.length(); i++)
             alphabet[i] = characters.charAt(i);
         changeTable = transitions;
-        startState = start;
+        startState = 0;//start;
         acceptingStates = accept;
     }
     
@@ -178,7 +178,7 @@ public class FiniteAutomata
     public void fillTransTable(int state, String character, int nextState)
     {
         int nextCharacter = getCharacterIndex(character) + 1;
-        int numStates = numberOfStates + 1;
+        int numStates = numberOfStates;
         int numAlphabet = alphabet.length + 1;
         
         if(changeTable == null)
@@ -296,7 +296,7 @@ public class FiniteAutomata
         {
             for(int newState = 1; newState < changeTable[state].length; newState++)
             {
-                if(changeTable[state][newState] == 0)
+                if(changeTable[state][newState] == -1)
                     return isEmpty;                    
             }
         }
